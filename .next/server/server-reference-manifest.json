@@ -1,0 +1,106 @@
+{
+  "node": {
+    "0777f4a36fe0a189076189bcc0457ac102dade0e": {
+      "workers": {
+        "app/(auth)/sign-in/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5Chiman%5C%5COneDrive%5C%5CDesktop%5C%5Cjsm_banking%5C%5Clib%5C%5Cactions%5C%5Cuser.actions.ts%22%2C%5B%22%24%24ACTION_1%22%2C%22%24%24ACTION_0%22%2C%22logoutAccount%22%2C%22SignIn%22%2C%22getLoggedInUser%22%2C%22%24%24ACTION_2%22%2C%22SignUp%22%5D%5D%5D&__client_imported__=true!",
+        "app/(auth)/sign-up/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5Chiman%5C%5COneDrive%5C%5CDesktop%5C%5Cjsm_banking%5C%5Clib%5C%5Cactions%5C%5Cuser.actions.ts%22%2C%5B%22%24%24ACTION_1%22%2C%22%24%24ACTION_0%22%2C%22logoutAccount%22%2C%22SignIn%22%2C%22getLoggedInUser%22%2C%22%24%24ACTION_2%22%2C%22SignUp%22%5D%5D%5D&__client_imported__=true!",
+        "app/(root)/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5Chiman%5C%5COneDrive%5C%5CDesktop%5C%5Cjsm_banking%5C%5Clib%5C%5Cactions%5C%5Cuser.actions.ts%22%2C%5B%22%24%24ACTION_1%22%2C%22%24%24ACTION_0%22%2C%22logoutAccount%22%2C%22SignIn%22%2C%22getLoggedInUser%22%2C%22%24%24ACTION_2%22%2C%22SignUp%22%5D%5D%2C%5B%22C%3A%5C%5CUsers%5C%5Chiman%5C%5COneDrive%5C%5CDesktop%5C%5Cjsm_banking%5C%5Clib%5C%5Cappwrite.ts%22%2C%5B%22createAdminClient%22%2C%22createSessionClient%22%5D%5D%5D&__client_imported__=!"
+      },
+      "layer": {
+        "app/(auth)/sign-in/page": "action-browser",
+        "app/(auth)/sign-up/page": "action-browser",
+        "app/(root)/page": "rsc"
+      }
+    },
+    "09fdc4b298d85d302f9791741827cf30f0fcee3a": {
+      "workers": {
+        "app/(auth)/sign-in/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5Chiman%5C%5COneDrive%5C%5CDesktop%5C%5Cjsm_banking%5C%5Clib%5C%5Cactions%5C%5Cuser.actions.ts%22%2C%5B%22%24%24ACTION_1%22%2C%22%24%24ACTION_0%22%2C%22logoutAccount%22%2C%22SignIn%22%2C%22getLoggedInUser%22%2C%22%24%24ACTION_2%22%2C%22SignUp%22%5D%5D%5D&__client_imported__=true!",
+        "app/(auth)/sign-up/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5Chiman%5C%5COneDrive%5C%5CDesktop%5C%5Cjsm_banking%5C%5Clib%5C%5Cactions%5C%5Cuser.actions.ts%22%2C%5B%22%24%24ACTION_1%22%2C%22%24%24ACTION_0%22%2C%22logoutAccount%22%2C%22SignIn%22%2C%22getLoggedInUser%22%2C%22%24%24ACTION_2%22%2C%22SignUp%22%5D%5D%5D&__client_imported__=true!",
+        "app/(root)/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5Chiman%5C%5COneDrive%5C%5CDesktop%5C%5Cjsm_banking%5C%5Clib%5C%5Cactions%5C%5Cuser.actions.ts%22%2C%5B%22%24%24ACTION_1%22%2C%22%24%24ACTION_0%22%2C%22logoutAccount%22%2C%22SignIn%22%2C%22getLoggedInUser%22%2C%22%24%24ACTION_2%22%2C%22SignUp%22%5D%5D%2C%5B%22C%3A%5C%5CUsers%5C%5Chiman%5C%5COneDrive%5C%5CDesktop%5C%5Cjsm_banking%5C%5Clib%5C%5Cappwrite.ts%22%2C%5B%22createAdminClient%22%2C%22createSessionClient%22%5D%5D%5D&__client_imported__=!"
+      },
+      "layer": {
+        "app/(auth)/sign-in/page": "action-browser",
+        "app/(auth)/sign-up/page": "action-browser",
+        "app/(root)/page": "rsc"
+      }
+    },
+    "33bb87015b6b04c050950b491e0546100eeb32b3": {
+      "workers": {
+        "app/(auth)/sign-in/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5Chiman%5C%5COneDrive%5C%5CDesktop%5C%5Cjsm_banking%5C%5Clib%5C%5Cactions%5C%5Cuser.actions.ts%22%2C%5B%22%24%24ACTION_1%22%2C%22%24%24ACTION_0%22%2C%22logoutAccount%22%2C%22SignIn%22%2C%22getLoggedInUser%22%2C%22%24%24ACTION_2%22%2C%22SignUp%22%5D%5D%5D&__client_imported__=true!",
+        "app/(auth)/sign-up/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5Chiman%5C%5COneDrive%5C%5CDesktop%5C%5Cjsm_banking%5C%5Clib%5C%5Cactions%5C%5Cuser.actions.ts%22%2C%5B%22%24%24ACTION_1%22%2C%22%24%24ACTION_0%22%2C%22logoutAccount%22%2C%22SignIn%22%2C%22getLoggedInUser%22%2C%22%24%24ACTION_2%22%2C%22SignUp%22%5D%5D%5D&__client_imported__=true!",
+        "app/(root)/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5Chiman%5C%5COneDrive%5C%5CDesktop%5C%5Cjsm_banking%5C%5Clib%5C%5Cactions%5C%5Cuser.actions.ts%22%2C%5B%22%24%24ACTION_1%22%2C%22%24%24ACTION_0%22%2C%22logoutAccount%22%2C%22SignIn%22%2C%22getLoggedInUser%22%2C%22%24%24ACTION_2%22%2C%22SignUp%22%5D%5D%2C%5B%22C%3A%5C%5CUsers%5C%5Chiman%5C%5COneDrive%5C%5CDesktop%5C%5Cjsm_banking%5C%5Clib%5C%5Cappwrite.ts%22%2C%5B%22createAdminClient%22%2C%22createSessionClient%22%5D%5D%5D&__client_imported__=!"
+      },
+      "layer": {
+        "app/(auth)/sign-in/page": "action-browser",
+        "app/(auth)/sign-up/page": "action-browser",
+        "app/(root)/page": "rsc"
+      }
+    },
+    "abf02a28f7a16047cf2352e9a0563204f85a2ff4": {
+      "workers": {
+        "app/(auth)/sign-in/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5Chiman%5C%5COneDrive%5C%5CDesktop%5C%5Cjsm_banking%5C%5Clib%5C%5Cactions%5C%5Cuser.actions.ts%22%2C%5B%22%24%24ACTION_1%22%2C%22%24%24ACTION_0%22%2C%22logoutAccount%22%2C%22SignIn%22%2C%22getLoggedInUser%22%2C%22%24%24ACTION_2%22%2C%22SignUp%22%5D%5D%5D&__client_imported__=true!",
+        "app/(auth)/sign-up/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5Chiman%5C%5COneDrive%5C%5CDesktop%5C%5Cjsm_banking%5C%5Clib%5C%5Cactions%5C%5Cuser.actions.ts%22%2C%5B%22%24%24ACTION_1%22%2C%22%24%24ACTION_0%22%2C%22logoutAccount%22%2C%22SignIn%22%2C%22getLoggedInUser%22%2C%22%24%24ACTION_2%22%2C%22SignUp%22%5D%5D%5D&__client_imported__=true!",
+        "app/(root)/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5Chiman%5C%5COneDrive%5C%5CDesktop%5C%5Cjsm_banking%5C%5Clib%5C%5Cactions%5C%5Cuser.actions.ts%22%2C%5B%22%24%24ACTION_1%22%2C%22%24%24ACTION_0%22%2C%22logoutAccount%22%2C%22SignIn%22%2C%22getLoggedInUser%22%2C%22%24%24ACTION_2%22%2C%22SignUp%22%5D%5D%2C%5B%22C%3A%5C%5CUsers%5C%5Chiman%5C%5COneDrive%5C%5CDesktop%5C%5Cjsm_banking%5C%5Clib%5C%5Cappwrite.ts%22%2C%5B%22createAdminClient%22%2C%22createSessionClient%22%5D%5D%5D&__client_imported__=!"
+      },
+      "layer": {
+        "app/(auth)/sign-in/page": "action-browser",
+        "app/(auth)/sign-up/page": "action-browser",
+        "app/(root)/page": "rsc"
+      }
+    },
+    "c27b477e5e1c5a63fc9efd4eed87647e305ddb28": {
+      "workers": {
+        "app/(auth)/sign-in/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5Chiman%5C%5COneDrive%5C%5CDesktop%5C%5Cjsm_banking%5C%5Clib%5C%5Cactions%5C%5Cuser.actions.ts%22%2C%5B%22%24%24ACTION_1%22%2C%22%24%24ACTION_0%22%2C%22logoutAccount%22%2C%22SignIn%22%2C%22getLoggedInUser%22%2C%22%24%24ACTION_2%22%2C%22SignUp%22%5D%5D%5D&__client_imported__=true!",
+        "app/(auth)/sign-up/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5Chiman%5C%5COneDrive%5C%5CDesktop%5C%5Cjsm_banking%5C%5Clib%5C%5Cactions%5C%5Cuser.actions.ts%22%2C%5B%22%24%24ACTION_1%22%2C%22%24%24ACTION_0%22%2C%22logoutAccount%22%2C%22SignIn%22%2C%22getLoggedInUser%22%2C%22%24%24ACTION_2%22%2C%22SignUp%22%5D%5D%5D&__client_imported__=true!",
+        "app/(root)/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5Chiman%5C%5COneDrive%5C%5CDesktop%5C%5Cjsm_banking%5C%5Clib%5C%5Cactions%5C%5Cuser.actions.ts%22%2C%5B%22%24%24ACTION_1%22%2C%22%24%24ACTION_0%22%2C%22logoutAccount%22%2C%22SignIn%22%2C%22getLoggedInUser%22%2C%22%24%24ACTION_2%22%2C%22SignUp%22%5D%5D%2C%5B%22C%3A%5C%5CUsers%5C%5Chiman%5C%5COneDrive%5C%5CDesktop%5C%5Cjsm_banking%5C%5Clib%5C%5Cappwrite.ts%22%2C%5B%22createAdminClient%22%2C%22createSessionClient%22%5D%5D%5D&__client_imported__=!"
+      },
+      "layer": {
+        "app/(auth)/sign-in/page": "action-browser",
+        "app/(auth)/sign-up/page": "action-browser",
+        "app/(root)/page": "rsc"
+      }
+    },
+    "ec9075dc05a59fbec20d83b47b90c7e2eab397f5": {
+      "workers": {
+        "app/(auth)/sign-in/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5Chiman%5C%5COneDrive%5C%5CDesktop%5C%5Cjsm_banking%5C%5Clib%5C%5Cactions%5C%5Cuser.actions.ts%22%2C%5B%22%24%24ACTION_1%22%2C%22%24%24ACTION_0%22%2C%22logoutAccount%22%2C%22SignIn%22%2C%22getLoggedInUser%22%2C%22%24%24ACTION_2%22%2C%22SignUp%22%5D%5D%5D&__client_imported__=true!",
+        "app/(auth)/sign-up/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5Chiman%5C%5COneDrive%5C%5CDesktop%5C%5Cjsm_banking%5C%5Clib%5C%5Cactions%5C%5Cuser.actions.ts%22%2C%5B%22%24%24ACTION_1%22%2C%22%24%24ACTION_0%22%2C%22logoutAccount%22%2C%22SignIn%22%2C%22getLoggedInUser%22%2C%22%24%24ACTION_2%22%2C%22SignUp%22%5D%5D%5D&__client_imported__=true!",
+        "app/(root)/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5Chiman%5C%5COneDrive%5C%5CDesktop%5C%5Cjsm_banking%5C%5Clib%5C%5Cactions%5C%5Cuser.actions.ts%22%2C%5B%22%24%24ACTION_1%22%2C%22%24%24ACTION_0%22%2C%22logoutAccount%22%2C%22SignIn%22%2C%22getLoggedInUser%22%2C%22%24%24ACTION_2%22%2C%22SignUp%22%5D%5D%2C%5B%22C%3A%5C%5CUsers%5C%5Chiman%5C%5COneDrive%5C%5CDesktop%5C%5Cjsm_banking%5C%5Clib%5C%5Cappwrite.ts%22%2C%5B%22createAdminClient%22%2C%22createSessionClient%22%5D%5D%5D&__client_imported__=!"
+      },
+      "layer": {
+        "app/(auth)/sign-in/page": "action-browser",
+        "app/(auth)/sign-up/page": "action-browser",
+        "app/(root)/page": "rsc"
+      }
+    },
+    "fe88ff596a6e17758a004f5c2b15e4ffcb9624b2": {
+      "workers": {
+        "app/(auth)/sign-in/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5Chiman%5C%5COneDrive%5C%5CDesktop%5C%5Cjsm_banking%5C%5Clib%5C%5Cactions%5C%5Cuser.actions.ts%22%2C%5B%22%24%24ACTION_1%22%2C%22%24%24ACTION_0%22%2C%22logoutAccount%22%2C%22SignIn%22%2C%22getLoggedInUser%22%2C%22%24%24ACTION_2%22%2C%22SignUp%22%5D%5D%5D&__client_imported__=true!",
+        "app/(auth)/sign-up/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5Chiman%5C%5COneDrive%5C%5CDesktop%5C%5Cjsm_banking%5C%5Clib%5C%5Cactions%5C%5Cuser.actions.ts%22%2C%5B%22%24%24ACTION_1%22%2C%22%24%24ACTION_0%22%2C%22logoutAccount%22%2C%22SignIn%22%2C%22getLoggedInUser%22%2C%22%24%24ACTION_2%22%2C%22SignUp%22%5D%5D%5D&__client_imported__=true!",
+        "app/(root)/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5Chiman%5C%5COneDrive%5C%5CDesktop%5C%5Cjsm_banking%5C%5Clib%5C%5Cactions%5C%5Cuser.actions.ts%22%2C%5B%22%24%24ACTION_1%22%2C%22%24%24ACTION_0%22%2C%22logoutAccount%22%2C%22SignIn%22%2C%22getLoggedInUser%22%2C%22%24%24ACTION_2%22%2C%22SignUp%22%5D%5D%2C%5B%22C%3A%5C%5CUsers%5C%5Chiman%5C%5COneDrive%5C%5CDesktop%5C%5Cjsm_banking%5C%5Clib%5C%5Cappwrite.ts%22%2C%5B%22createAdminClient%22%2C%22createSessionClient%22%5D%5D%5D&__client_imported__=!"
+      },
+      "layer": {
+        "app/(auth)/sign-in/page": "action-browser",
+        "app/(auth)/sign-up/page": "action-browser",
+        "app/(root)/page": "rsc"
+      }
+    },
+    "bf5ce999eb4b55edfa5b8d55f9d1a6edf991ce74": {
+      "workers": {
+        "app/(root)/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5Chiman%5C%5COneDrive%5C%5CDesktop%5C%5Cjsm_banking%5C%5Clib%5C%5Cactions%5C%5Cuser.actions.ts%22%2C%5B%22%24%24ACTION_1%22%2C%22%24%24ACTION_0%22%2C%22logoutAccount%22%2C%22SignIn%22%2C%22getLoggedInUser%22%2C%22%24%24ACTION_2%22%2C%22SignUp%22%5D%5D%2C%5B%22C%3A%5C%5CUsers%5C%5Chiman%5C%5COneDrive%5C%5CDesktop%5C%5Cjsm_banking%5C%5Clib%5C%5Cappwrite.ts%22%2C%5B%22createAdminClient%22%2C%22createSessionClient%22%5D%5D%5D&__client_imported__=!"
+      },
+      "layer": {
+        "app/(root)/page": "rsc"
+      }
+    },
+    "da1bbea90dd2e02e2e6c3111687ca73b77c2a3a1": {
+      "workers": {
+        "app/(root)/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5Chiman%5C%5COneDrive%5C%5CDesktop%5C%5Cjsm_banking%5C%5Clib%5C%5Cactions%5C%5Cuser.actions.ts%22%2C%5B%22%24%24ACTION_1%22%2C%22%24%24ACTION_0%22%2C%22logoutAccount%22%2C%22SignIn%22%2C%22getLoggedInUser%22%2C%22%24%24ACTION_2%22%2C%22SignUp%22%5D%5D%2C%5B%22C%3A%5C%5CUsers%5C%5Chiman%5C%5COneDrive%5C%5CDesktop%5C%5Cjsm_banking%5C%5Clib%5C%5Cappwrite.ts%22%2C%5B%22createAdminClient%22%2C%22createSessionClient%22%5D%5D%5D&__client_imported__=!"
+      },
+      "layer": {
+        "app/(root)/page": "rsc"
+      }
+    }
+  },
+  "edge": {},
+  "encryptionKey": "9d1wZ5zgBbjMoZESRwNXSopCAu72NALElgWex8zVHwk="
+}

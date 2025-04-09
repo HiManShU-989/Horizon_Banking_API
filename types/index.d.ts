@@ -8,14 +8,14 @@ declare type SearchParamProps = {
 // ========================================
 
 declare type SignUpParams = {
-  firstName?: string;
-  lastName?: string;
-  address1?: string;
-  city?: string;
-  state?: string;
-  postalCode?: string;
-  dateOfBirth?: string;
-  ssn?: string;
+  firstName: string;
+  lastName: string;
+  address1: string;
+  city: string;
+  state: string;
+  postalCode: string;
+  dateOfBirth: string;
+  ssn: string;
   email: string;
   password: string;
 };
@@ -120,7 +120,7 @@ declare type TransferParams = {
 
 declare type AddFundingSourceParams = {
   dwollaCustomerId: string;
-  processorToken: string;
+  accessToken: string;
   bankName: string;
 };
 
@@ -132,7 +132,7 @@ declare type NewDwollaCustomerParams = {
   address1: string;
   city: string;
   state: string;
-  postalCode: string;
+    postalCode: string;
   dateOfBirth: string;
   ssn: string;
 };
@@ -179,14 +179,14 @@ declare interface PlaidLinkProps {
   dwollaCustomerId?: string;
 }
 
-// declare type User = sdk.Models.Document & {
-//   accountId: string;
-//   email: string;
-//   name: string;
-//   items: string[];
-//   accessToken: string;
-//   image: string;
-// };
+declare type User = sdk.Models.Document & {
+  accountId: string;
+  email: string;
+  name: string;
+  items: string[];
+  accessToken: string;
+  image: string;
+};
 
 declare interface AuthFormProps {
   type: "sign-in" | "sign-up";

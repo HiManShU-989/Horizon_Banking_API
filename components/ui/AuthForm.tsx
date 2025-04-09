@@ -21,6 +21,7 @@ import CustomInput from './CustomInput';
 import { authFormSchema } from '@/lib/utils';
 import { Loader2 } from "lucide-react";
 import { SignIn, SignUp } from '@/lib/actions/user.actions';
+import PlaidLink from './PlaidLink';
 
 
 
@@ -42,11 +43,25 @@ const AuthForm = ({ type }: { type: string }) => {
   const onSubmit = async (data: z.infer<typeof formSchema>) => {
     setIsLoading(true)
     try{
+
 // Sign up with appwrite and create a plaid link token
-    if(type === "sign-up"){
-        const newUser = await SignUp(data);
+      if(type === "sign-up"){
+      const userData = {
+        firstName: data.firstName!,
+        lastName: data.lastName!,
+        address1: data.address1!,
+        city: data.city!,
+        state: data.state!,
+        postalCode: data.postalCode!,
+        dateOfBirth: data.dateOfBirth!,
+        ssn: data.ssn!,
+        email: data.email,
+        password: data.password,
+      };
+        const newUser = await SignUp(userData);
         setUser(newUser);
     }
+
     if(type === "sign-in"){
       const response = await SignIn({
         email: data.email,
@@ -97,7 +112,9 @@ const AuthForm = ({ type }: { type: string }) => {
       {
         user ? (
           <div className='flex flex-col gap-4'>
-            {/* Plaid Link */}
+            <PlaidLink
+            user = {user} variant="primary"
+            />
           </div>
         ) : (
           <>
@@ -115,7 +132,7 @@ const AuthForm = ({ type }: { type: string }) => {
                    <CustomInput control={form.control} name={'city'} label={'City'} placeholder={'Enter your City'}/>
                    
                    <div className="flex gap-4">
-                   <CustomInput control={form.control} name={'state'} label={'State'} placeholder={'Ex: Maharashtra'}/>
+                   <CustomInput control={form.control} name={'state'} label={'State'} placeholder={'Ex: UP'}/>
                   <CustomInput control={form.control} name={'postalCode'} label={'PinCode'} placeholder={'Ex: 400001'}/>
                    </div>
 
@@ -158,8 +175,8 @@ const AuthForm = ({ type }: { type: string }) => {
                   </Link>
             </footer>
           </>
-        )
-      }
+      )
+       }
     </section>
   )
 }

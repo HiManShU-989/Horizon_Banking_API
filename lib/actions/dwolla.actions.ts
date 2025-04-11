@@ -79,7 +79,7 @@ export const createTransfer = async ({
         },
       },
       amount: {
-        currency: "₹",
+        currency: "USD",
         value: amount,
       },
     };
@@ -93,7 +93,7 @@ export const createTransfer = async ({
 
 export const addFundingSource = async ({
   dwollaCustomerId,
-  accessToken,
+  processorToken,
   bankName,
 }: AddFundingSourceParams) => {
   try {
@@ -104,7 +104,7 @@ export const addFundingSource = async ({
     const fundingSourceOptions = {
       customerId: dwollaCustomerId,
       fundingSourceName: bankName,
-      plaidToken: accessToken,
+      plaidToken: processorToken,
       _links: dwollaAuthLinks,
     };
     return await createFundingSource(fundingSourceOptions);

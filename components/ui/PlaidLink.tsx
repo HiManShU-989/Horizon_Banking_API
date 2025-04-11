@@ -1,4 +1,5 @@
-import React, { use, useCallback, useEffect, useState } from 'react'
+"use-client";
+import React, {  useCallback, useEffect, useState } from 'react'
 import { Button } from './button'
 import {PlaidLinkOnSuccess, PlaidLinkOptions, usePlaidLink} from 'react-plaid-link' // Ensure this is the correct package or path
 import { useRouter } from 'next/navigation';
@@ -12,7 +13,7 @@ const PlaidLink = ({user,variant}:PlaidLinkProps) => {
            const data =  await createLinkToken(user);
         setToken(data?.linkToken);
     }
-    getLinkToken()
+    getLinkToken();
 }
     ,[user]);
     const onSuccess = useCallback<PlaidLinkOnSuccess>(async (public_token:string) => {
@@ -21,8 +22,7 @@ const PlaidLink = ({user,variant}:PlaidLinkProps) => {
                 user
             })
             router.push('/');
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [user])
+    }, [router, user])
     const config:PlaidLinkOptions = {
         token,
         onSuccess

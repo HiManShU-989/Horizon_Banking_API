@@ -1,6 +1,6 @@
 "use server";
 
-import { ID } from "node-appwrite";
+import { ID, Query } from "node-appwrite";
 import { createAdminClient, createSessionClient } from "../appwrite";
 import { cookies } from "next/headers";
 import { encryptId, extractCustomerIdFromUrl, parseStringify } from "../utils";
@@ -8,16 +8,42 @@ import { CountryCode, ProcessorTokenCreateRequest, ProcessorTokenCreateRequestPr
 import { plaidClient } from "../plaid";
 import { revalidatePath } from "next/cache";
 import { addFundingSource, createDwollaCustomer } from "./dwolla.actions";
+import axios from "axios";
 const {
   APPWRITE_DATABASE_ID: DATABASE_ID,
   APPWRITE_USER_COLLECTION_ID: USER_COLLECTION_ID,
   APPWRITE_BANK_COLLECTION_ID: BANK_COLLECTION_ID,
 } = process.env;
+
+export const getUserInfo = async ({userId}:getUserInfoProps) =>{
+  try {
+    const {database} = await createAdminClient();
+    const user = await database.listDocuments(
+      DATABASE_ID!,
+      USER_COLLECTION_ID!,
+      [Query.equal('userId', [userId])],
+    );
+    return parseStringify(user.documents[0]);
+
+  } catch (error) {
+    console.log(error);
+  }
+}
+
 export const SignIn = async ({email,password}:signInProps)=>{
     try {
       const { account } = await createAdminClient();
-      const response = await account.createEmailPasswordSession(email,password);
-      return parseStringify(response);
+      const session = await account.createEmailPasswordSession(email, password);
+      
+        cookies().set("appwrite-session", session.secret, {
+          path: "/",
+          httpOnly: true,
+          sameSite: "strict",
+          secure: true,
+        });
+
+        const user = await getUserInfo({userId: session.userId});
+      return parseStringify(user);
     } catch (error) {
         console.error("Error", error);
     }
@@ -43,7 +69,6 @@ export const SignUp = async ({password, ...userData}: SignUpParams)=>{
 
         if(!dwollaCustomerUrl) throw new Error("Error creating dwolla customer");
         const dwollaCustomerId = extractCustomerIdFromUrl(dwollaCustomerUrl);
-        const session = await account.createEmailPasswordSession(email, password);
         const newUser = await database.createDocument(
           DATABASE_ID!,
           USER_COLLECTION_ID!,
@@ -55,6 +80,7 @@ export const SignUp = async ({password, ...userData}: SignUpParams)=>{
             dwollaCustomerId,
           }
         );
+        const session = await account.createEmailPasswordSession(email, password);
       
         cookies().set("appwrite-session", session.secret, {
           path: "/",
@@ -72,7 +98,8 @@ export const SignUp = async ({password, ...userData}: SignUpParams)=>{
 export async function getLoggedInUser() {
     try {
       const { account } = await createSessionClient();
-      const user= await account.get();
+      const result= await account.get();
+      const user = await getUserInfo({userId: result.$id});
       return parseStringify(user);
     } catch (error) {
       return null;
@@ -92,22 +119,42 @@ export const  logoutAccount = async() => {
 
 export const createLinkToken = async (user:User) => {
   try {
-    const tokenParams = {
-      user:{
+    // const tokenParams = {
+    //   user:{
+    //     client_user_id: user.$id,
+    //   },
+    //   client_name: `${user.firstName} ${user.lastName}`,
+    //   products: ['auth'] as Products[],
+    //   language: 'en',
+    //   country_codes: ['US'] as CountryCode[],
+    // }
+    // const response = await plaidClient.linkTokenCreate(tokenParams);
+    // return parseStringify({linkToken: response.data.link_token});
+    const response = await axios.post('https://sandbox.plaid.com/link/token/create', {
+      client_id: process.env.PLAID_CLIENT_ID,
+      secret: process.env.PLAID_SECRET,
+      user: {
         client_user_id: user.$id,
       },
       client_name: `${user.firstName} ${user.lastName}`,
       products: ['auth'] as Products[],
+      redirect_uri: process.env.NEXT_PUBLIC_REDIRECT_URI,
       language: 'en',
       country_codes: ['US'] as CountryCode[],
-    }
-    const response = await plaidClient.linkTokenCreate(tokenParams);
-    return parseStringify({linkToken: response.data.link_token});
-
+      webhook: process.env.NEXT_PUBLIC_WEBHOOK_URL,
+    }, {
+      headers: {
+        'Content-Type': 'application/json',
+        'Plaid-Version': '2020-09-14',
+      }
+    });
+    
+return parseStringify({linkToken: response.data.link_token});
   } catch (error) {
     console.log(error);
   }
 } 
+
 export const createBankAccount = async ({   userId, 
   bankId,
   accountId,
@@ -130,7 +177,7 @@ export const createBankAccount = async ({   userId,
      );
      return parseStringify(bankAccount);
    } catch (error) {
-    
+    console.error("An error occurred while creating the bank account:", error);
    }
 }
 
@@ -158,10 +205,9 @@ export const exchangePublicToken = async ({
     };
     const processorTokenResponse = await plaidClient.processorTokenCreate(request);
     const processorToken = processorTokenResponse.data.processor_token;
-
     const fundingSourceUrl = await addFundingSource({
       dwollaCustomerId: user.dwollaCustomerId,
-      accessToken,
+      processorToken,
       bankName: accountData.name,
     });
     if(!fundingSourceUrl) throw Error;
@@ -182,5 +228,38 @@ export const exchangePublicToken = async ({
     });
   } catch (error) {
     console.error("An error occurred while creeating exchange tokens",error);
+  }
+}
+
+export const getBanks = async ({userId}:getBanksProps) => {
+  try {
+    const {database} = await createAdminClient();
+    const banks = await database.listDocuments(
+      DATABASE_ID!,
+      BANK_COLLECTION_ID!,
+      [Query.equal('userId', [userId])],
+    );
+    return parseStringify(banks.documents);
+
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+
+export const getBank = async ({documentId}:getBankProps) => {
+  try {
+
+    const {database} = await createAdminClient();
+    const bank = await database.listDocuments(
+      DATABASE_ID!,
+      BANK_COLLECTION_ID!,
+      [Query.equal('$id', [documentId])],
+    );
+
+    return parseStringify(bank.documents[0]);
+
+  } catch (error) {
+    console.log("getBank error:", error);
   }
 }

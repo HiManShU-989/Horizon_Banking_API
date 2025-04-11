@@ -120,7 +120,7 @@ declare type TransferParams = {
 
 declare type AddFundingSourceParams = {
   dwollaCustomerId: string;
-  accessToken: string;
+  processorToken: string;
   bankName: string;
 };
 
@@ -175,7 +175,7 @@ declare interface PaginationProps {
 
 declare interface PlaidLinkProps {
   user: User;
-  variant?: "primary" | "ghost";
+  variant?: 'primary' | 'ghost' | 'secondary';
   dwollaCustomerId?: string;
 }
 

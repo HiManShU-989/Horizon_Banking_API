@@ -1,5 +1,4 @@
 'use client';
-import { formatAmount } from '@/lib/utils';
 import Countup from 'react-countup'
 const AnimatedCounter = ({amount} :{ amount : number}) => {
   return (

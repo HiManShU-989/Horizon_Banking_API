@@ -1,4 +1,3 @@
-import { headers } from 'next/headers';
 import {Configuration, PlaidApi, PlaidEnvironments} from 'plaid';
 const configuration = new Configuration({
     basePath: PlaidEnvironments.sandbox,
@@ -9,5 +8,6 @@ const configuration = new Configuration({
         }
     }
 })
+
 
 export const plaidClient = new PlaidApi(configuration);

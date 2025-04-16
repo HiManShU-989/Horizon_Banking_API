@@ -132,7 +132,7 @@ declare type NewDwollaCustomerParams = {
   address1: string;
   city: string;
   state: string;
-    postalCode: string;
+  postalCode: string;
   dateOfBirth: string;
   ssn: string;
 };
@@ -175,18 +175,18 @@ declare interface PaginationProps {
 
 declare interface PlaidLinkProps {
   user: User;
-  variant?: 'primary' | 'ghost' | 'secondary';
+  variant?: "primary" | "ghost";
   dwollaCustomerId?: string;
 }
 
-declare type User = sdk.Models.Document & {
-  accountId: string;
-  email: string;
-  name: string;
-  items: string[];
-  accessToken: string;
-  image: string;
-};
+// declare type User = sdk.Models.Document & {
+//   accountId: string;
+//   email: string;
+//   name: string;
+//   items: string[];
+//   accessToken: string;
+//   image: string;
+// };
 
 declare interface AuthFormProps {
   type: "sign-in" | "sign-up";
@@ -211,7 +211,7 @@ declare interface TotalBalanceBoxProps {
 
 declare interface FooterProps {
   user: User;
-  type?: mobile | desktop;
+  type?: 'mobile' | 'desktop'
 }
 
 declare interface RightSidebarProps {
